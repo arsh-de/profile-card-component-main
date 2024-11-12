@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(185, 75%, 39%);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: -50vw -60vw, 40vw 25vw;
+}
+
+.container {
+    width: 100%;
+    max-width: 320px;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.img-container {
+    background: url(images/bg-pattern-card.svg);
+    height: 150px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#top {
+    position: absolute;
+    top: -30%;
+    left: -70%;
+    width: 450px;
+    height: 450px;
+}
+
+#bottom {
+    position: absolute;
+    bottom: -30%;
+    right: -70%;
+    width: 450px;
+    height: 450px;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 5px solid white;
+    position: relative;
+    top: 65%;
+    width: 100px;
+    height: 100px;
+}
+
+.profile {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.age {
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+}
+
+.city {
+    color: var(--Dark-grayish-blue);
+    font-size: large;
+    margin-top: 1rem;
+}
+
+.stats-container {
+    border-top: .5px solid var(--Dark-gray);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+}
+
+.stats-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.stats-info {
+    font-size: smaller;
+    letter-spacing: .1rem;
+    color: var(--Dark-gray);
+    font-weight: 500;
+}
+
+@media (max-aspect-ratio: 1 / 1) {
+    body {
+        background-size: 100vh;
+        background-position: -70vh -50vh, 25vh 50vh;
+    }
+
+    @media screen and (min-width: 540px) {
+        body {
+            background-position: -70vh -50vh, 40vh 50vh;
+        }
+    }
+}
